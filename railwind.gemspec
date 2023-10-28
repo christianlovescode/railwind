@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ["hi@christianlovescode.com"]
 
   spec.summary = "a customizeable ViewComponent UI library baked with Tailwind CSS."
-  spec.description = "Railwind is a customizable ViewComponent UI library that leverages the power of Tailwind CSS. It provides a set of reusable and configurable UI components that can be easily integrated into any Rails application. With Railwind, developers can rapidly build beautiful and responsive user interfaces with less effort and time."
+  spec.description = "<COMING SOON> Railwind is a customizable ViewComponent UI library that leverages the power of Tailwind CSS. It provides a set of reusable and configurable UI components that can be easily integrated into any Rails application. With Railwind, developers can rapidly build beautiful and responsive user interfaces with less effort and time."
   spec.homepage = "https://github.com/christianlovescode/railwind"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.0"
@@ -25,7 +25,8 @@ Gem::Specification.new do |spec|
   spec.files = Dir.chdir(__dir__) do
     `git ls-files -z`.split("\x0").reject do |f|
       (File.expand_path(f) == __FILE__) ||
-        f.start_with?(*%w[bin/ test/ spec/ features/ .git .circleci appveyor Gemfile])
+        f.start_with?(*%w[bin/ test/ spec/ features/ .git .circleci appveyor Gemfile]) ||
+        f.end_with?('.gem') # Exclude any .gem files
     end
   end
   spec.bindir = "exe"
