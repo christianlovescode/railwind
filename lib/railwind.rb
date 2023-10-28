@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "railwind/version"
+require_relative "railwind/generators/button_generator"
 
 module Railwind
   class Error < StandardError; end
