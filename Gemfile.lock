@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    railwind (0.1.9)
+    railwind (0.1.13)
       rails (~> 7.0)
       view_component (~> 3.0)
 
