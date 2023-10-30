@@ -1,0 +1,11 @@
+<div data-id="<%= @id %>" class="tabs" data-controller="tabs">
+  <% @tabs.each_with_index do |tab, index| %>
+    <button data-action="tabs#switchTab" data-tab-index="<%= index %>">
+      <%= tab %>
+    </button>
+  <% end %>
+
+  <div class="tab-content">
+    <%= content %>
+  </div>
+</div>

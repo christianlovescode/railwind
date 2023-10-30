@@ -1,5 +1,5 @@
 <% base_classes =
-  "px-4 py-2 rounded-full transition hover:opacity-90 hover:shadow border-2 font-semibold"
+  "px-4 py-2 rounded-full transition hover:opacity-90 hover:shadow border-2 font-semibold flex items-center justify-center gap-2"
 variant_classes =
   case @variant
   when "primary"
@@ -18,6 +18,6 @@ variant_classes =
 tailwind_classes = "#{base_classes} #{variant_classes}" %>
 
 <button type="<%= @type %>" class="<%= tailwind_classes %>">
-  <%= @text %>
   <%= content %>
+  <%= @text %>
 </button>
