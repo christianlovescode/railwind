@@ -1,11 +1,29 @@
 <div data-id="<%= @id %>" class="tabs" data-controller="tabs">
-  <% @tabs.each_with_index do |tab, index| %>
-    <button data-action="tabs#switchTab" data-tab-index="<%= index %>">
-      <%= tab %>
-    </button>
-  <% end %>
 
-  <div class="tab-content">
+  <div
+    class="
+      flex
+      items-center
+      gap-4
+      mb-2
+      w-full
+      border-b-2
+      border-solid
+      border-gray-200
+    "
+  >
+    <% @tabs.each_with_index do |tab, index| %>
+      <button
+        class="border-b-2 border-solid mb-[-2px] font-semibold"
+        data-action="tabs#switchTab"
+        data-tab-index="<%= index %>"
+      >
+        <%= tab %>
+      </button>
+    <% end %>
+  </div>
+
+  <div class="tab-content hidden">
     <%= content %>
   </div>
 </div>
