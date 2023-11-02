@@ -9,4 +9,6 @@ module Railwind
         copy_file "button/_button_component.html.erb", "app/components/button_component.html.erb"
       end
     end
-  end
+end
+
+
