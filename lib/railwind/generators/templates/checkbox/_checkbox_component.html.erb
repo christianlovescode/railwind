@@ -1,0 +1,11 @@
+<div class="space-y-5">
+  <div class="relative flex items-start">
+    <div class="flex h-6 items-center">
+      <input  id="<%= @name%>" aria-describedby="<%= @name %>-description" name="<%= @name %>" type="checkbox" <%= 'checked' if @checked %> <%= 'disabled' if @disabled %> class="h-4 w-4 rounded border-black text-black focus:ring-black disabled:cursor-not-allowed <%= 'opacity-50' if @disabled %>">
+    </div>
+    <div class="ml-3 leading-6 <%= 'opacity-50' if @disabled %>">
+      <label for="<%= @name %>" class="font-medium text-black text-md"><%= @label %></label>
+      <p id="<%= @name %>-description" class="text-gray-600 text-sm"><%= @description %></p>
+    </div>
+  </div>
+</div>
